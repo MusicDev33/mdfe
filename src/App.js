@@ -4,6 +4,8 @@ import Home from '@views/Home/Home';
 import Music from '@views/Music/Music';
 import Code from '@views/Code/Code';
 import Blog from '@views/Blog/Blog';
+import Chemistry from '@views/Chemistry/Chemistry';
+
 import SNavbar from '@components/SNavbar/SNavbar';
 
 import Row from 'react-bootstrap/Row';
@@ -47,6 +49,10 @@ function App() {
 
                 <Route path='/blog'>
                   <Blog />
+                </Route>
+
+                <Route path='/chemistry'>
+                  <Chemistry />
                 </Route>
               </Switch>
             </div>

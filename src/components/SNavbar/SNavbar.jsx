@@ -7,7 +7,7 @@ import { Link, useLocation } from 'react-router-dom';
 import './SNavbar.scss';
 
 import { IconContext } from "react-icons";
-import { FaHome, FaCode, FaMusic, FaNewspaper } from 'react-icons/fa';
+import { FaHome, FaCode, FaMusic, FaNewspaper, FaFlask } from 'react-icons/fa';
 
 function SNavbar() {
   const location = useLocation();
@@ -99,6 +99,24 @@ function SNavbar() {
 
           <Col className="my-auto">
             <h3 className="mb-0 my-auto">Blog</h3>
+          </Col>
+        </Row>
+      </Link>
+
+      <Link to='/chemistry'>
+        <Row className={"snavbar-item my-2" + (pathName === '/chemistry' ? ' current' : '')}>
+          <Col sm={3} className="px-0 text-center">
+            <div className="icon">
+              <IconContext.Provider value={{size: '2.5em'}}>
+                <div>
+                  <FaFlask />
+                </div>
+              </IconContext.Provider>
+            </div>
+          </Col>
+
+          <Col className="my-auto">
+            <h3 className="mb-0 my-auto">Chemistry</h3>
           </Col>
         </Row>
       </Link>
