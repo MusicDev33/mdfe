@@ -23,7 +23,7 @@ export default class Music extends Component {
       <div>
         <h1>Music</h1>
         <p className="px-1">
-          I make music. That's it. I currently don't upload to Spotify but plan on doing so sometime soon. Until then, 
+          I make music. That's it. I currently don't upload to Spotify but I plan on doing so sometime soon. Until then, 
           SoundCloud is the place to find me.
         </p>
 

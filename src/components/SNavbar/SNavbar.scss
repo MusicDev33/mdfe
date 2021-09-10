@@ -32,7 +32,11 @@
 
   color: #3a3a3a;
 
-  &:hover {
+  &:hover:not(.current) {
     background: #47d4a8;
+  }
+
+  &.current {
+    background: white;
   }
 }
