@@ -27,7 +27,7 @@ function App() {
           <Col>
             <div className="content-container px-4 py-3">
               <Switch>
-                <Route path='/'>
+                <Route exact path='/'>
                   <Home />
                 </Route>
 

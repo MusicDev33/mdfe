@@ -73,21 +73,23 @@ export default class SNavbar extends Component {
           </Row>
         </Link>
 
-        <Row className="snavbar-item">
-          <Col sm={3} className="px-0 text-center">
-            <div className="icon">
-              <IconContext.Provider value={{size: '2.5em'}}>
-                <div>
-                  <FaMusic />
-                </div>
-              </IconContext.Provider>
-            </div>
-          </Col>
+        <Link to='/music'>
+          <Row className="snavbar-item">
+            <Col sm={3} className="px-0 text-center">
+              <div className="icon">
+                <IconContext.Provider value={{size: '2.5em'}}>
+                  <div>
+                    <FaMusic />
+                  </div>
+                </IconContext.Provider>
+              </div>
+            </Col>
 
-          <Col className="my-auto">
-            <h3 className="mb-0 my-auto">Music</h3>
-          </Col>
-        </Row>
+            <Col className="my-auto">
+              <h3 className="mb-0 my-auto">Music</h3>
+            </Col>
+          </Row>
+        </Link>
       </section>
     );
   }
