@@ -1,9 +1,12 @@
 html {
   background: #7decc9;
+  max-height: 100vh;
 }
 
 .app-container {
   height: 100vh;
+
+  overflow: hidden;
 }
 
 #root, body {
@@ -13,7 +16,18 @@ html {
 .content-container {
   background: white;
   border-radius: 32px;
-  height: 100%;
 
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.content-col {
+  max-height: 100vh;
+  overflow: auto;
+}
+
+::selection {
+  background: #bef8e6; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #bef8e6; /* Gecko Browsers */
 }

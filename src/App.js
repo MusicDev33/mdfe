@@ -18,13 +18,13 @@ import {
 function App() {
   return (
     <Router>
-      <Container fluid className="py-2 px-3 app-container">
+      <Container fluid className="px-3 app-container">
         <Row className="h-100">
-          <Col sm={3}>
+          <Col sm={3} className="py-2">
             <SNavbar />
           </Col>
 
-          <Col>
+          <Col className="content-col py-3">
             <div className="content-container px-4 py-3">
               <Switch>
                 <Route exact path='/'>
