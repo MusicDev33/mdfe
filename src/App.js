@@ -1,7 +1,8 @@
-import logo from './logo.svg';
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from '@views/Home/Home';
+import Music from '@views/Music/Music';
+import Code from '@views/Code/Code';
 import SNavbar from '@components/SNavbar/SNavbar';
 
 import Row from 'react-bootstrap/Row';
@@ -23,11 +24,19 @@ function App() {
             <SNavbar />
           </Col>
 
-          <Col sm={9}>
+          <Col>
             <div className="content-container px-4 py-3">
               <Switch>
                 <Route path='/'>
                   <Home />
+                </Route>
+
+                <Route path='/music'>
+                  <Music />
+                </Route>
+
+                <Route path='/code'>
+                  <Code />
                 </Route>
               </Switch>
             </div>
