@@ -1,3 +1,5 @@
+@import 'scss/colors';
+
 .profile {
   border-radius: 16px;
 }
@@ -14,7 +16,7 @@
   transition: 0.3s;
 
   &:hover {
-    background: #47d4a8;
+    background: #3d3d3d;
   }
 }
 
@@ -30,13 +32,14 @@
   cursor: pointer;
   transition: 0.3s;
 
-  color: #3a3a3a;
+  color: #d3d3d3;
 
   &:hover:not(.current) {
-    background: #47d4a8;
+    background: #3d3d3d;
   }
 
   &.current {
-    background: white;
+    background: $palette-1;
+    color: white;
   }
 }

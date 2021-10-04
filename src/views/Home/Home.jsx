@@ -13,7 +13,12 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <h1>Home</h1>
+        <section className="content-section">
+          <h1>Home</h1>
+          <p>
+            Hello
+          </p>
+        </section>
       </div>
     );
   }
