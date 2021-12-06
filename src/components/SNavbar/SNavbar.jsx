@@ -103,6 +103,24 @@ function SNavbar() {
         </Row>
       </Link>
 
+      <Link to='/blog'>
+        <Row className={"snavbar-item my-2" + (pathName === '/blog' ? ' current' : '')}>
+          <Col sm={3} className="px-0 text-center">
+            <div className="icon">
+              <IconContext.Provider value={{size: '2.5em'}}>
+                <div>
+                  <FaNewspaper />
+                </div>
+              </IconContext.Provider>
+            </div>
+          </Col>
+
+          <Col className="my-auto">
+            <h3 className="mb-0 my-auto">Blog</h3>
+          </Col>
+        </Row>
+      </Link>
+
       <Link to='/search'>
         <Row className={"snavbar-item my-2" + (pathName === '/search' ? ' current' : '')}>
           <Col sm={3} className="px-0 text-center">
