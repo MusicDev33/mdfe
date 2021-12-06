@@ -5,6 +5,7 @@ import Music from '@views/Music/Music';
 import Code from '@views/Code/Code';
 import Blog from '@views/Blog/Blog';
 import Chemistry from '@views/Chemistry/Chemistry';
+import Search from '@views/Search/Search';
 
 import SNavbar from '@components/SNavbar/SNavbar';
 
@@ -15,9 +16,9 @@ import Container from 'react-bootstrap/Container';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  useLocation
+  Route
 } from 'react-router-dom';
+
 
 function App() {
   // let location = useLocation();
@@ -53,6 +54,10 @@ function App() {
 
                 <Route path='/chemistry'>
                   <Chemistry />
+                </Route>
+
+                <Route path='/search'>
+                  <Search />
                 </Route>
               </Switch>
             </div>
