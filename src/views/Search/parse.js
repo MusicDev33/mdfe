@@ -16,6 +16,7 @@ export const parseResults = async (searchTerms) => {
     const outer = cheerio.load(cheerio.html($(el)));
     const header = cheerio.text(outer('div a h3'));
     const anchor = cheerio.html(outer('div a'));
+    const description = cheerio.text(outer('div div span:not(.MUxGbd):not(.qzEoUe)'));
 
     if (header && header.trim().length) {
 
@@ -23,10 +24,12 @@ export const parseResults = async (searchTerms) => {
         console.log('LINK');
         returnData.push({
           name: header,
-          link: $(anchor).attr('href')
+          link: $(anchor).attr('href'),
+          description
         });
         console.log(header);
         console.log($(anchor).attr('href'));
+        console.log(description);
       }
     }
   })

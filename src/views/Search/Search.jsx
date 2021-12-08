@@ -49,7 +49,8 @@ export default class Search extends Component {
             <Col key={index.toString()} sm={4} className="mb-4">
               <a href={result.link} target="_blank" rel="noreferrer">
                 <div className="search-result">
-                  {result.name}
+                  <h5>{result.name}</h5>
+                  <div className="desc">{result.description}</div>
                 </div>
               </a>
             </Col>
