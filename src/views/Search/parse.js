@@ -18,14 +18,16 @@ export const parseResults = async (searchTerms) => {
     const anchor = cheerio.html(outer('div a'));
 
     if (header && header.trim().length) {
-      console.log('LINK');
 
-      returnData.push({
-        name: header,
-        link: $(anchor).attr('href')
-      });
-      console.log(header);
-      console.log($(anchor).attr('href'));
+      if (!returnData.filter(item => {return item.name === header}).length) {
+        console.log('LINK');
+        returnData.push({
+          name: header,
+          link: $(anchor).attr('href')
+        });
+        console.log(header);
+        console.log($(anchor).attr('href'));
+      }
     }
   })
 

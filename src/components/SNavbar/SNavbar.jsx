@@ -8,6 +8,7 @@ import './SNavbar.scss';
 
 import { IconContext } from "react-icons";
 import { FaHome, FaCode, FaMusic, FaNewspaper, FaFlask, FaSearch } from 'react-icons/fa';
+import { CgPokemon } from 'react-icons/cg';
 
 function SNavbar() {
   const location = useLocation();
@@ -135,6 +136,24 @@ function SNavbar() {
 
           <Col className="my-auto">
             <h3 className="mb-0 my-auto">Search</h3>
+          </Col>
+        </Row>
+      </Link>
+
+      <Link to='/pokemon'>
+        <Row className={"snavbar-item my-2" + (pathName === '/pokemon' ? ' current' : '')}>
+          <Col sm={3} className="px-0 text-center">
+            <div className="icon">
+              <IconContext.Provider value={{size: '2.5em'}}>
+                <div>
+                  <CgPokemon />
+                </div>
+              </IconContext.Provider>
+            </div>
+          </Col>
+
+          <Col className="my-auto">
+            <h3 className="mb-0 my-auto">Pokemon</h3>
           </Col>
         </Row>
       </Link>

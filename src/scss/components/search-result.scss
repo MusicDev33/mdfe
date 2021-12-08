@@ -1,0 +1,19 @@
+.search-result {
+  background: #3c3d42;
+  border-radius: 12px;
+  padding: 12px;
+  cursor: pointer;
+
+  transition: 0.3s;
+  height: 100%;
+  color: #eee;
+  text-decoration: none!important;
+
+  &:hover {
+    background: #999999;
+  }
+}
+
+a {
+  text-decoration: none;
+}

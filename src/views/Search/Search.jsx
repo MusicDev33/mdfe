@@ -11,16 +11,22 @@ export default class Search extends Component {
     super(props);
 
     this.state = {
-      searchField: ''
+      searchField: '',
+      searchResults: []
     };
 
     this.handleSearch = this.handleSearch.bind(this);
     this.handleSearchFieldChange = this.handleSearchFieldChange.bind(this);
   }
 
-  handleSearch(event) {
+  async handleSearch(event) {
     if (event.key === 'Enter') {
-      parseResults(this.state.searchField);
+      const results = await parseResults(this.state.searchField);
+      this.setState({
+        searchResults: results
+      });
+
+      console.log(results);
     }
   }
 
@@ -31,11 +37,23 @@ export default class Search extends Component {
   render() {
     return (
       <div>
-        <Row>
+        <Row className="mb-4">
           <Col>
             <input className="sm-searchbar" placeholder="Search" 
               onKeyPress={this.handleSearch} value={this.state.searchField} onChange={this.handleSearchFieldChange} />
           </Col>
+        </Row>
+          
+        <Row>
+          {this.state.searchResults.map((result, index) => (
+            <Col key={index.toString()} sm={4} className="mb-4">
+              <a href={result.link} target="_blank" rel="noreferrer">
+                <div className="search-result">
+                  {result.name}
+                </div>
+              </a>
+            </Col>
+          ))}
         </Row>
       </div>
     );
