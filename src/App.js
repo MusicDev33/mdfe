@@ -15,7 +15,7 @@ import Container from 'react-bootstrap/Container';
 
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route
 } from 'react-router-dom';
 
@@ -35,31 +35,14 @@ function App() {
 
           <Col className="content-col py-3">
             <div className="content-container px-4 py-3">
-              <Switch>
-                <Route exact path='/'>
-                  <Home />
-                </Route>
-
-                <Route path='/music'>
-                  <Music />
-                </Route>
-
-                <Route path='/code'>
-                  <Code />
-                </Route>
-
-                <Route path='/blog'>
-                  <Blog />
-                </Route>
-
-                <Route path='/chemistry'>
-                  <Chemistry />
-                </Route>
-
-                <Route path='/search'>
-                  <Search />
-                </Route>
-              </Switch>
+              <Routes>
+                <Route exact path='/' element={<Home />} />
+                <Route exact path='/music' element={<Music />} />
+                <Route exact path='/code' element={<Code />} />
+                <Route exact path='/blog' element={<Blog />} />
+                <Route exact path='/chemistry' element={<Chemistry />} />
+                <Route exact path='/search' element={<Search />} />
+              </Routes>
             </div>
           </Col>
         </Row>
