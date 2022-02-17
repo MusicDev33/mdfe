@@ -1,7 +1,7 @@
 {
   "apps" : [
     {
-      "name"      : "hucopia",
+      "name"      : "mdfe",
       "script"    : "npx",
       "interpreter": "none",
       "args": "serve -s build -l 3000"
